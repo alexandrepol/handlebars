@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST HANDLE</title>
+</head>
+<body>
+    <div id="ntm">
+
+    </div>
+    <div id="form">
+        <form name="catForm" id="catForm">
+            <p>
+                <label>Nom de ton chat :</label>
+                <input id="catName" type="text" required name="catName">
+            </p>
+            <p>
+                <label>Age :</label>
+                <input id="catAge" type="text" required name="catAge">
+            </p>
+            <button id="catSubmit">Add cat</button>
+        </form>
+    </div>
+
+
+</body>
+<script id="contentTemplate" type="text/x-handlebars-template">
+    <div class="entry">
+        <div class="body">
+            {{#each this}}
+            {{ chats }}
+            {{/each}}
+        </div>
+    </div>
+</script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+<script src="js/main.js"></script>
+</html>
